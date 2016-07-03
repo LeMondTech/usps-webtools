@@ -1,0 +1,62 @@
+{
+  "name": "usps-webtools",
+  "author": {
+    "name": "Sherod Taylor",
+    "email": "sherodtaylor@gmail.com"
+  },
+  "description": "Api wrapper for the USPS Web-Tools",
+  "version": "0.0.10",
+  "main": "./src/usps",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MadisonReed/usps-webtools"
+  },
+  "contributors": [
+    {
+      "name": "Sherod Taylor",
+      "email": "sherodtaylor@gmail.com"
+    },
+    {
+      "name": "Tim Marshall",
+      "email": "timothyjmarshall@gmail.com"
+    },
+    {
+      "name": "Scott Stokes",
+      "email": "scottspork@gmail.com"
+    }
+  ],
+  "keywords": [
+    "usps",
+    "web-tools",
+    "web",
+    "tools",
+    "address",
+    "validation",
+    "standardization"
+  ],
+  "dependencies": {
+    "request": "2.34.0",
+    "xml2js": "0.4.4",
+    "xmlbuilder": "2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "1.17.1",
+    "chai": "1.9.0"
+  },
+  "engines": {
+    "node": ">=0.10.20"
+  },
+  "license": "MIT",
+  "readme": "### Installation:\n\n``` sh\nnpm install usps-webtools\n```\n\n### Usage:\n\nInitializing the usps model with usps server url address, and user id.\n\n__Example:__\n\n``` js\nUSPS = require('usps-webtools');\n\nvar usps = new USPS({\n  server: 'http://production.shippingapis.com/ShippingAPI.dll',\n  userId: 'USPS User id'\n});\n```\n\n### verify(object, callback)\n\nVerify takes two parameters: object and callback.\n\nobject: street1, street2, city, state, zip\n\ncallback: err, address\n\n__Example__\n\n``` js\nusps.verify({\n  street1: '322 3rd st.',\n  street2: 'Apt 2',\n  city: 'San Francisco',\n  state: 'CA',\n  zip: '94103'\n}, function(err, address) {\n  console.log(address);\n});\n```\n\n### zipCodeLookup(object, callback)\n\nzipCodeLookup takes two parameters: object and callback.\n\nobject: street1, street2, city, state\n\ncallback: err, address\n\n__Example__\n\n``` js\nusps.zipCodeLookup({\n  street1: '322 3rd st.',\n  street2: 'Apt 2',\n  city: 'San Francisco',\n  state: 'CA'\n}, function(err, address) {\n  console.log(address);\n});\n```\n\n### cityStateLookup(object, callback)\n\ncityStateLookup takes two parameters: zipcode and callback.\n\nzipcode: 5 digit zipcode\n\ncallback: err, address\n\n__Example__\n\n``` js\nusps.cityStateLookup({\n  street1: '322 3rd st.',\n  street2: 'Apt 2',\n  city: 'San Francisco',\n  state: 'CA'\n}, function(err, address) {\n  console.log(address);\n});\n```",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/MadisonReed/usps-webtools/issues"
+  },
+  "homepage": "https://github.com/MadisonReed/usps-webtools",
+  "_id": "usps-webtools@0.0.10",
+  "dist": {
+    "shasum": "3de9e92dda162fb5b0675e69949ccb1d8fad1031"
+  },
+  "_from": "usps-webtools@",
+  "_resolved": "https://registry.npmjs.org/usps-webtools/-/usps-webtools-0.0.10.tgz"
+}
