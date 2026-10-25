@@ -1,0 +1,45 @@
+{
+  "brand": "Polymaker",
+  "website": "https://polymaker.com",
+  "filaments": [
+    {
+      "name": "PolyTerra PLA",
+      "material": "PLA",
+      "nozzle": { "min": 190, "max": 230, "print": 210, "firstLayer": 215 },
+      "bed": { "print": 55, "firstLayer": 55 },
+      "density": 1.31,
+      "notes": "Matte, mineral-filled PLA. Prints well slightly cooler than standard PLA.",
+      "verified": false
+    },
+    {
+      "name": "PolyLite PLA",
+      "material": "PLA",
+      "nozzle": { "min": 190, "max": 230, "print": 210, "firstLayer": 215 },
+      "bed": { "print": 55, "firstLayer": 55 },
+      "verified": false
+    },
+    {
+      "name": "PolyLite PETG",
+      "material": "PETG",
+      "nozzle": { "min": 230, "max": 250, "print": 240, "firstLayer": 240 },
+      "bed": { "print": 75, "firstLayer": 75 },
+      "density": 1.25,
+      "verified": false
+    },
+    {
+      "name": "PolyLite ASA",
+      "material": "ASA",
+      "nozzle": { "min": 240, "max": 260, "print": 250, "firstLayer": 255 },
+      "bed": { "print": 95, "firstLayer": 100 },
+      "verified": false
+    },
+    {
+      "name": "Fiberon PA6-CF20",
+      "material": "PA-CF",
+      "nozzle": { "min": 280, "max": 300, "print": 290, "firstLayer": 290 },
+      "bed": { "print": 40, "firstLayer": 45 },
+      "notes": "Dry thoroughly before printing. Use glue stick on PEI.",
+      "verified": false
+    }
+  ]
+}

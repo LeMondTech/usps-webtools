@@ -1,0 +1,13 @@
+{
+  "brand": "HATCHBOX",
+  "website": "https://www.hatchbox3d.com",
+  "filaments": [
+    {
+      "name": "PLA",
+      "material": "PLA",
+      "nozzle": { "min": 180, "max": 210, "print": 205, "firstLayer": 210 },
+      "bed": { "print": 55, "firstLayer": 55 },
+      "verified": false
+    }
+  ]
+}

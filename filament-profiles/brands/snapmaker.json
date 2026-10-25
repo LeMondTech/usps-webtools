@@ -1,0 +1,20 @@
+{
+  "brand": "Snapmaker",
+  "website": "https://www.snapmaker.com",
+  "filaments": [
+    {
+      "name": "PLA",
+      "material": "PLA",
+      "nozzle": { "min": 190, "max": 230, "print": 215, "firstLayer": 220 },
+      "bed": { "print": 60, "firstLayer": 60 },
+      "verified": false
+    },
+    {
+      "name": "PETG",
+      "material": "PETG",
+      "nozzle": { "min": 230, "max": 260, "print": 245, "firstLayer": 245 },
+      "bed": { "print": 70, "firstLayer": 70 },
+      "verified": false
+    }
+  ]
+}

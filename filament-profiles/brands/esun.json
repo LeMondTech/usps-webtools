@@ -1,0 +1,35 @@
+{
+  "brand": "eSUN",
+  "website": "https://www.esun3d.com",
+  "filaments": [
+    {
+      "name": "PLA+",
+      "material": "PLA",
+      "nozzle": { "min": 205, "max": 225, "print": 215, "firstLayer": 220 },
+      "bed": { "print": 60, "firstLayer": 60 },
+      "density": 1.23,
+      "verified": false
+    },
+    {
+      "name": "PETG",
+      "material": "PETG",
+      "nozzle": { "min": 230, "max": 250, "print": 240, "firstLayer": 240 },
+      "bed": { "print": 75, "firstLayer": 75 },
+      "verified": false
+    },
+    {
+      "name": "ABS+",
+      "material": "ABS",
+      "nozzle": { "min": 230, "max": 270, "print": 250, "firstLayer": 255 },
+      "bed": { "print": 95, "firstLayer": 100 },
+      "verified": false
+    },
+    {
+      "name": "eTPU-95A",
+      "material": "TPU",
+      "nozzle": { "min": 200, "max": 220, "print": 215, "firstLayer": 215 },
+      "bed": { "print": 45, "firstLayer": 45 },
+      "verified": false
+    }
+  ]
+}

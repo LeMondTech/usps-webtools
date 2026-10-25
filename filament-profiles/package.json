@@ -1,0 +1,15 @@
+{
+  "name": "snapmaker-u1-filament-profiles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Filament profile database for the Snapmaker U1, with Snapmaker Orca preset export",
+  "bin": { "filadb": "bin/filadb.js" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "validate": "node bin/filadb.js validate",
+    "export": "node bin/filadb.js export",
+    "site": "node bin/filadb.js site"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

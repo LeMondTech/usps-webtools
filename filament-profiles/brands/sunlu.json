@@ -1,0 +1,20 @@
+{
+  "brand": "SUNLU",
+  "website": "https://www.sunlu.com",
+  "filaments": [
+    {
+      "name": "PLA",
+      "material": "PLA",
+      "nozzle": { "min": 200, "max": 230, "print": 210, "firstLayer": 215 },
+      "bed": { "print": 60, "firstLayer": 60 },
+      "verified": false
+    },
+    {
+      "name": "PETG",
+      "material": "PETG",
+      "nozzle": { "min": 230, "max": 250, "print": 240, "firstLayer": 240 },
+      "bed": { "print": 75, "firstLayer": 75 },
+      "verified": false
+    }
+  ]
+}

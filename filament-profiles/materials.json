@@ -1,0 +1,135 @@
+{
+  "PLA": {
+    "orcaType": "PLA",
+    "nozzle": { "min": 190, "max": 230, "print": 215, "firstLayer": 220 },
+    "bed": { "print": 60, "firstLayer": 60 },
+    "fan": { "min": 100, "max": 100, "overhang": 100, "offFirstLayers": 1 },
+    "maxVolumetricSpeed": 18,
+    "flowRatio": 0.98,
+    "pressureAdvance": 0.035,
+    "retraction": { "length": 0.8, "speed": 30 },
+    "density": 1.24,
+    "dry": { "temp": 50, "hours": 6 },
+    "enclosure": "none",
+    "hardenedNozzle": false
+  },
+  "PLA-HS": {
+    "extends": "PLA",
+    "orcaType": "PLA",
+    "nozzle": { "min": 200, "max": 240, "print": 220, "firstLayer": 225 },
+    "maxVolumetricSpeed": 24
+  },
+  "PLA-CF": {
+    "extends": "PLA",
+    "orcaType": "PLA-CF",
+    "nozzle": { "min": 210, "max": 240, "print": 225, "firstLayer": 230 },
+    "maxVolumetricSpeed": 12,
+    "density": 1.3,
+    "hardenedNozzle": true
+  },
+  "PETG": {
+    "orcaType": "PETG",
+    "nozzle": { "min": 230, "max": 260, "print": 240, "firstLayer": 245 },
+    "bed": { "print": 75, "firstLayer": 75 },
+    "fan": { "min": 20, "max": 50, "overhang": 90, "offFirstLayers": 2 },
+    "maxVolumetricSpeed": 12,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.045,
+    "retraction": { "length": 0.8, "speed": 30 },
+    "density": 1.27,
+    "dry": { "temp": 65, "hours": 8 },
+    "enclosure": "none",
+    "hardenedNozzle": false
+  },
+  "PETG-CF": {
+    "extends": "PETG",
+    "orcaType": "PETG-CF",
+    "nozzle": { "min": 240, "max": 270, "print": 255, "firstLayer": 255 },
+    "maxVolumetricSpeed": 10,
+    "density": 1.3,
+    "hardenedNozzle": true
+  },
+  "ABS": {
+    "orcaType": "ABS",
+    "nozzle": { "min": 240, "max": 270, "print": 255, "firstLayer": 260 },
+    "bed": { "print": 95, "firstLayer": 95 },
+    "fan": { "min": 0, "max": 30, "overhang": 60, "offFirstLayers": 3 },
+    "maxVolumetricSpeed": 16,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.04,
+    "retraction": { "length": 0.8, "speed": 30 },
+    "density": 1.04,
+    "dry": { "temp": 80, "hours": 4 },
+    "enclosure": "required",
+    "hardenedNozzle": false
+  },
+  "ASA": {
+    "extends": "ABS",
+    "orcaType": "ASA",
+    "density": 1.07
+  },
+  "TPU": {
+    "orcaType": "TPU",
+    "nozzle": { "min": 210, "max": 240, "print": 225, "firstLayer": 225 },
+    "bed": { "print": 40, "firstLayer": 40 },
+    "fan": { "min": 50, "max": 100, "overhang": 100, "offFirstLayers": 1 },
+    "maxVolumetricSpeed": 3.5,
+    "flowRatio": 1.0,
+    "pressureAdvance": null,
+    "retraction": { "length": 0.4, "speed": 20 },
+    "density": 1.21,
+    "dry": { "temp": 55, "hours": 8 },
+    "enclosure": "none",
+    "hardenedNozzle": false
+  },
+  "PA": {
+    "orcaType": "PA",
+    "nozzle": { "min": 260, "max": 300, "print": 280, "firstLayer": 280 },
+    "bed": { "print": 50, "firstLayer": 50 },
+    "fan": { "min": 0, "max": 30, "overhang": 50, "offFirstLayers": 3 },
+    "maxVolumetricSpeed": 8,
+    "flowRatio": 0.96,
+    "pressureAdvance": 0.04,
+    "retraction": { "length": 0.8, "speed": 30 },
+    "density": 1.12,
+    "dry": { "temp": 80, "hours": 12 },
+    "enclosure": "required",
+    "hardenedNozzle": false
+  },
+  "PA-CF": {
+    "extends": "PA",
+    "orcaType": "PA-CF",
+    "density": 1.2,
+    "hardenedNozzle": true
+  },
+  "PC": {
+    "orcaType": "PC",
+    "nozzle": { "min": 260, "max": 300, "print": 280, "firstLayer": 280 },
+    "bed": { "print": 100, "firstLayer": 100 },
+    "fan": { "min": 0, "max": 20, "overhang": 40, "offFirstLayers": 3 },
+    "maxVolumetricSpeed": 10,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.04,
+    "retraction": { "length": 0.8, "speed": 30 },
+    "density": 1.2,
+    "dry": { "temp": 80, "hours": 8 },
+    "enclosure": "required",
+    "hardenedNozzle": false
+  },
+  "PVA": {
+    "orcaType": "PVA",
+    "nozzle": { "min": 190, "max": 220, "print": 210, "firstLayer": 210 },
+    "bed": { "print": 60, "firstLayer": 60 },
+    "fan": { "min": 100, "max": 100, "overhang": 100, "offFirstLayers": 1 },
+    "maxVolumetricSpeed": 6,
+    "flowRatio": 0.98,
+    "pressureAdvance": 0.04,
+    "retraction": { "length": 0.8, "speed": 30 },
+    "density": 1.23,
+    "dry": { "temp": 50, "hours": 8 },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "soluble": true,
+    "support": true
+  }
+}

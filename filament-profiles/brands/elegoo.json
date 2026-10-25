@@ -1,0 +1,20 @@
+{
+  "brand": "Elegoo",
+  "website": "https://www.elegoo.com",
+  "filaments": [
+    {
+      "name": "Rapid PLA+",
+      "material": "PLA-HS",
+      "nozzle": { "min": 200, "max": 230, "print": 220, "firstLayer": 225 },
+      "bed": { "print": 60, "firstLayer": 60 },
+      "verified": false
+    },
+    {
+      "name": "PETG Pro",
+      "material": "PETG",
+      "nozzle": { "min": 230, "max": 260, "print": 245, "firstLayer": 245 },
+      "bed": { "print": 75, "firstLayer": 75 },
+      "verified": false
+    }
+  ]
+}
