@@ -1,0 +1,56 @@
+{
+  "brand": "Overture",
+  "website": "https://overture3d.com",
+  "filaments": [
+    {
+      "name": "PLA",
+      "material": "PLA",
+      "nozzle": {
+        "min": 190,
+        "max": 220,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 60,
+        "firstLayer": 60
+      },
+      "density": 1.21,
+      "dry": {
+        "temp": 50,
+        "hours": 7
+      },
+      "notes": "TDS recommends 40-70 mm/s; Overture High Speed PLA is a separate product.",
+      "sources": [
+        "https://overture3d.com/products/overture-pla",
+        "https://overture3d.com/cdn/shop/files/OVERTURE_PLA_TDS_EN_V5.1_a4102671-a3b0-416f-9191-7e6feb681e3e.pdf"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "High Speed PETG",
+      "material": "PETG-HF",
+      "nozzle": {
+        "min": 230,
+        "max": 260,
+        "print": 230,
+        "firstLayer": 230
+      },
+      "bed": {
+        "print": 70,
+        "firstLayer": 70
+      },
+      "dry": {
+        "temp": 60,
+        "hours": 5
+      },
+      "notes": "Overture's main PETG listing is now High Speed PETG (up to 300 mm/s). Older PETG listings say 230-250 \u00b0C nozzle, 80-90 \u00b0C bed. Over-drying makes it brittle.",
+      "sources": [
+        "https://overture3d.com/products/overture-high-speed-petg"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    }
+  ]
+}

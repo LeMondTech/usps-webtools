@@ -1,0 +1,180 @@
+{
+  "brand": "Polymaker",
+  "website": "https://polymaker.com",
+  "filaments": [
+    {
+      "name": "PolyTerra PLA",
+      "material": "PLA",
+      "nozzle": {
+        "min": 190,
+        "max": 230,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 60,
+        "firstLayer": 60
+      },
+      "maxVolumetricSpeed": 24,
+      "dry": {
+        "temp": 55,
+        "hours": 6
+      },
+      "notes": "Polymaker has renamed PolyTerra PLA to Panchroma Matte PLA (same material). Slightly more abrasive than gloss PLA.",
+      "sources": [
+        "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/panchroma-tm/panchroma-tm-matte-pla",
+        "https://us.polymaker.com/products/polyterra-pla"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "PolyLite PLA",
+      "material": "PLA",
+      "nozzle": {
+        "min": 190,
+        "max": 230,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 60,
+        "firstLayer": 60
+      },
+      "maxVolumetricSpeed": 15,
+      "density": 1.17,
+      "dry": {
+        "temp": 55,
+        "hours": 6
+      },
+      "notes": "Snapmaker Orca also ships an official \"Polymaker General PLA Family @U1\" preset.",
+      "sources": [
+        "https://wiki.polymaker.com/polymaker-products/more-about-our-products/documents/technical-data-sheets/pla/polylite-tm-pla",
+        "https://wiki.polymaker.com/polymaker-products/polymaker-material-print-tips"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "PolyLite PETG",
+      "material": "PETG",
+      "nozzle": {
+        "min": 230,
+        "max": 260,
+        "print": 255,
+        "firstLayer": 255
+      },
+      "bed": {
+        "print": 80,
+        "firstLayer": 80
+      },
+      "fan": {
+        "min": 0,
+        "max": 20
+      },
+      "maxVolumetricSpeed": 15,
+      "density": 1.25,
+      "dry": {
+        "temp": 65,
+        "hours": 6
+      },
+      "notes": "Being discontinued in favour of the new \"Polymaker PETG\" (separate entry).",
+      "sources": [
+        "https://polymaker.com/wp-content/uploads/TDS_Polymaker_PolyLite-PETG_V6.0_2026-06-09_EN.pdf",
+        "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/prime-materials/petg/polylite-tm-petg"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "PETG",
+      "material": "PETG",
+      "nozzle": {
+        "min": 240,
+        "max": 260,
+        "print": 255,
+        "firstLayer": 255
+      },
+      "bed": {
+        "print": 70,
+        "firstLayer": 70
+      },
+      "fan": {
+        "min": 20,
+        "max": 60
+      },
+      "maxVolumetricSpeed": 22,
+      "density": 1.3,
+      "dry": {
+        "temp": 60,
+        "hours": 6
+      },
+      "notes": "New formula replacing PolyLite PETG. Polymaker quotes 22 mm\u00b3/s on a stock Bambu hotend; treat as an upper bound on the U1 until tested.",
+      "sources": [
+        "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/prime-materials/petg/polymaker-tm-petg-new"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "PolyLite ASA",
+      "material": "ASA",
+      "nozzle": {
+        "min": 240,
+        "max": 260,
+        "print": 260,
+        "firstLayer": 260
+      },
+      "bed": {
+        "print": 90,
+        "firstLayer": 90
+      },
+      "fan": {
+        "min": 0,
+        "max": 0
+      },
+      "density": 1.13,
+      "dry": {
+        "temp": 70,
+        "hours": 6
+      },
+      "notes": "Now sold as \"Polymaker ASA (formerly PolyLite ASA)\". Polymaker recommends no part cooling and a draft-free enclosure.",
+      "sources": [
+        "https://polymaker.com/wp-content/uploads/lana-downloads/PolyLite_ASA_TDS_V5.3.pdf",
+        "https://polymaker.com/product/polylite-asa"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "Fiberon PA6-CF20",
+      "material": "PA-CF",
+      "nozzle": {
+        "min": 280,
+        "max": 300,
+        "print": 290,
+        "firstLayer": 290
+      },
+      "bed": {
+        "print": 50,
+        "firstLayer": 50
+      },
+      "fan": {
+        "min": 0,
+        "max": 0
+      },
+      "density": 1.17,
+      "dry": {
+        "temp": 100,
+        "hours": 10
+      },
+      "notes": "Requires a hardened nozzle (0.4 mm or larger). Dry before every print (TDS: 100 \u00b0C for 10 h in an oven; most filament dryers top out lower, so dry longer). Keep below 20% RH. Use glue on PEI.",
+      "sources": [
+        "https://fiberon.polymaker.com/wp-content/uploads/TDS_FIBERON-PA6-CF20_V1.1_EN.pdf",
+        "https://fiberon.polymaker.com/product/pa6-cf20/"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    }
+  ]
+}

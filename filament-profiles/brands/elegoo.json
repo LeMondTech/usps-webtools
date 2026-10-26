@@ -1,0 +1,55 @@
+{
+  "brand": "Elegoo",
+  "website": "https://www.elegoo.com",
+  "filaments": [
+    {
+      "name": "Rapid PLA+",
+      "material": "PLA-HS",
+      "nozzle": {
+        "min": 200,
+        "max": 230,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "density": 1.2,
+      "dry": {
+        "temp": 55,
+        "hours": 6
+      },
+      "notes": "Rated up to 600 mm/s.",
+      "sources": [
+        "https://us.elegoo.com/products/elegoo-rapid-pla-plus-filament-1-75mm-colored-1kg"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "PETG Pro",
+      "material": "PETG",
+      "nozzle": {
+        "min": 230,
+        "max": 260,
+        "print": 240,
+        "firstLayer": 240
+      },
+      "bed": {
+        "print": 75,
+        "firstLayer": 75
+      },
+      "dry": {
+        "temp": 60,
+        "hours": 8
+      },
+      "notes": "Not the same product as Elegoo Rapid PETG.",
+      "sources": [
+        "https://us.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    }
+  ]
+}

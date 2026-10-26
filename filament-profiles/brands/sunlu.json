@@ -1,0 +1,51 @@
+{
+  "brand": "SUNLU",
+  "website": "https://www.sunlu.com",
+  "filaments": [
+    {
+      "name": "PLA",
+      "material": "PLA",
+      "nozzle": {
+        "min": 200,
+        "max": 240,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 60,
+        "firstLayer": 60
+      },
+      "dry": {
+        "temp": 50,
+        "hours": 6
+      },
+      "notes": "SUNLU: 200-210 \u00b0C for 50-100 mm/s, 210-240 \u00b0C for 100-200 mm/s.",
+      "sources": [
+        "https://www.sunlu.com/products/pla-3d-printing-filament"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "PETG",
+      "material": "PETG",
+      "nozzle": {
+        "min": 240,
+        "max": 260,
+        "print": 255,
+        "firstLayer": 255
+      },
+      "bed": {
+        "print": 70,
+        "firstLayer": 70
+      },
+      "density": 1.27,
+      "notes": "SUNLU pages conflict on drying temperature (50 vs 60-65 \u00b0C).",
+      "sources": [
+        "https://store.sunlu.com/products/over-6kg-bundle-sale-petg-3d-printer-filament-1-75mm-1kg-roll"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    }
+  ]
+}

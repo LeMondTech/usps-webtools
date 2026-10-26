@@ -1,0 +1,92 @@
+{
+  "brand": "Prusament",
+  "website": "https://www.prusa3d.com",
+  "filaments": [
+    {
+      "name": "PLA",
+      "material": "PLA",
+      "nozzle": {
+        "min": 200,
+        "max": 220,
+        "print": 210,
+        "firstLayer": 215
+      },
+      "bed": {
+        "print": 60,
+        "firstLayer": 60
+      },
+      "density": 1.24,
+      "dry": {
+        "temp": 45,
+        "hours": 6
+      },
+      "notes": "Prusa: 215 \u00b0C first layer, 210 \u00b0C after. Drying usually not needed.",
+      "sources": [
+        "https://prusament.com/wp-content/uploads/2022/10/PLA_Prusament_TDS_2021_10_EN.pdf",
+        "https://help.prusa3d.com/article/pla_2062"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "PETG",
+      "material": "PETG",
+      "nozzle": {
+        "min": 240,
+        "max": 260,
+        "print": 250,
+        "firstLayer": 250
+      },
+      "bed": {
+        "print": 80,
+        "firstLayer": 80
+      },
+      "fan": {
+        "min": 40,
+        "max": 50
+      },
+      "density": 1.27,
+      "dry": {
+        "temp": 55,
+        "hours": 6
+      },
+      "notes": "Prusa: 50% fan, no fan for the first layers.",
+      "sources": [
+        "https://prusament.com/materials/prusament-petg/",
+        "https://prusament.com/wp-content/uploads/2022/10/PETG_Prusament_TDS_2021_10_EN.pdf"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    },
+    {
+      "name": "ASA",
+      "material": "ASA",
+      "nozzle": {
+        "min": 255,
+        "max": 265,
+        "print": 260,
+        "firstLayer": 260
+      },
+      "bed": {
+        "print": 110,
+        "firstLayer": 110
+      },
+      "fan": {
+        "min": 10,
+        "max": 30
+      },
+      "density": 1.07,
+      "dry": {
+        "temp": 80,
+        "hours": 4
+      },
+      "notes": "Prusa recommends 110 \u00b0C bed; the U1 tops out at 100 \u00b0C, so export clamps it. Use the top cover, a brim, and glue for adhesion. Prusa: 30% fan.",
+      "sources": [
+        "https://prusament.com/materials/prusament-asa/",
+        "https://prusament.com/wp-content/uploads/2022/10/ASA_Prusament_TDS_2022_16_EN.pdf"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
+      "verified": false
+    }
+  ]
+}

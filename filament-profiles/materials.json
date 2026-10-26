@@ -1,0 +1,655 @@
+{
+  "_about": "Slicer values (temps, fan, flow, PA, max volumetric speed, retraction, density) come from the official Snapmaker Orca U1 Generic presets (github.com/Snapmaker/OrcaSlicer, resources/profiles/Snapmaker). \"nil\" retraction in those presets means the printer default (1.5 mm @ 30 mm/s on the U1). Drying, enclosure and hardened-nozzle flags are general guidance, not from Snapmaker.",
+  "PLA": {
+    "orcaType": "PLA",
+    "slicerPreset": "Generic PLA",
+    "nozzle": {
+      "min": 190,
+      "max": 240,
+      "print": 220,
+      "firstLayer": 220
+    },
+    "bed": {
+      "print": 65,
+      "firstLayer": 65
+    },
+    "fan": {
+      "min": 100,
+      "max": 100,
+      "overhang": 100,
+      "offFirstLayers": 1
+    },
+    "maxVolumetricSpeed": 12,
+    "flowRatio": 0.98,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.24,
+    "dry": {
+      "temp": 50,
+      "hours": 6
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic PLA\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PLA-HS": {
+    "orcaType": "PLA",
+    "slicerPreset": "Generic PLA High Speed",
+    "nozzle": {
+      "min": 190,
+      "max": 240,
+      "print": 220,
+      "firstLayer": 220
+    },
+    "bed": {
+      "print": 65,
+      "firstLayer": 65
+    },
+    "fan": {
+      "min": 100,
+      "max": 100,
+      "overhang": 100,
+      "offFirstLayers": 1
+    },
+    "maxVolumetricSpeed": 18,
+    "flowRatio": 0.98,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.24,
+    "dry": {
+      "temp": 50,
+      "hours": 6
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic PLA High Speed\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PLA-Silk": {
+    "orcaType": "PLA",
+    "slicerPreset": "Generic PLA Silk",
+    "nozzle": {
+      "min": 190,
+      "max": 240,
+      "print": 220,
+      "firstLayer": 220
+    },
+    "bed": {
+      "print": 65,
+      "firstLayer": 65
+    },
+    "fan": {
+      "min": 100,
+      "max": 100,
+      "overhang": 100,
+      "offFirstLayers": 1
+    },
+    "maxVolumetricSpeed": 7.5,
+    "flowRatio": 0.98,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 0.5,
+      "speed": 30
+    },
+    "density": 1.24,
+    "dry": {
+      "temp": 50,
+      "hours": 6
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic PLA Silk\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PLA-CF": {
+    "orcaType": "PLA-CF",
+    "slicerPreset": "Generic PLA-CF",
+    "nozzle": {
+      "min": 190,
+      "max": 240,
+      "print": 220,
+      "firstLayer": 220
+    },
+    "bed": {
+      "print": 65,
+      "firstLayer": 65
+    },
+    "fan": {
+      "min": 100,
+      "max": 100,
+      "overhang": 100,
+      "offFirstLayers": 1
+    },
+    "maxVolumetricSpeed": 12,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.24,
+    "dry": {
+      "temp": 50,
+      "hours": 6
+    },
+    "enclosure": "none",
+    "hardenedNozzle": true,
+    "source": "Snapmaker Orca official preset \"Generic PLA-CF\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PETG": {
+    "orcaType": "PETG",
+    "slicerPreset": "Generic PETG",
+    "nozzle": {
+      "min": 230,
+      "max": 270,
+      "print": 255,
+      "firstLayer": 255
+    },
+    "bed": {
+      "print": 80,
+      "firstLayer": 80
+    },
+    "fan": {
+      "min": 40,
+      "max": 90,
+      "overhang": 90,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 12,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.04,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.25,
+    "dry": {
+      "temp": 65,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic PETG\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PETG-HF": {
+    "orcaType": "PETG",
+    "slicerPreset": "Generic PETG HF",
+    "nozzle": {
+      "min": 220,
+      "max": 270,
+      "print": 230,
+      "firstLayer": 230
+    },
+    "bed": {
+      "print": 80,
+      "firstLayer": 80
+    },
+    "fan": {
+      "min": 20,
+      "max": 40,
+      "overhang": 90,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 16,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.04,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.28,
+    "dry": {
+      "temp": 65,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic PETG HF\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PETG-CF": {
+    "orcaType": "PETG-CF",
+    "slicerPreset": "Generic PETG-CF",
+    "nozzle": {
+      "min": 240,
+      "max": 270,
+      "print": 255,
+      "firstLayer": 255
+    },
+    "bed": {
+      "print": 80,
+      "firstLayer": 80
+    },
+    "fan": {
+      "min": 5,
+      "max": 40,
+      "overhang": 100,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 11,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.25,
+    "dry": {
+      "temp": 65,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": true,
+    "source": "Snapmaker Orca official preset \"Generic PETG-CF\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PETG-GF": {
+    "orcaType": "PETG-GF",
+    "slicerPreset": "Generic PETG-GF",
+    "nozzle": {
+      "min": 240,
+      "max": 270,
+      "print": 255,
+      "firstLayer": 255
+    },
+    "bed": {
+      "print": 80,
+      "firstLayer": 80
+    },
+    "fan": {
+      "min": 5,
+      "max": 40,
+      "overhang": 100,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 10,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.03,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.25,
+    "dry": {
+      "temp": 65,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": true,
+    "source": "Snapmaker Orca official preset \"Generic PETG-GF\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PCTG": {
+    "orcaType": "PCTG",
+    "slicerPreset": "Generic PCTG",
+    "nozzle": {
+      "min": 240,
+      "max": 270,
+      "print": 255,
+      "firstLayer": 255
+    },
+    "bed": {
+      "print": 100,
+      "firstLayer": 100
+    },
+    "fan": {
+      "min": 10,
+      "max": 40,
+      "overhang": 90,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 6,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.04,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.29,
+    "dry": {
+      "temp": 65,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic PCTG\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "ABS": {
+    "orcaType": "ABS",
+    "slicerPreset": "Generic ABS",
+    "nozzle": {
+      "min": 240,
+      "max": 280,
+      "print": 270,
+      "firstLayer": 270
+    },
+    "bed": {
+      "print": 90,
+      "firstLayer": 90
+    },
+    "fan": {
+      "min": 10,
+      "max": 80,
+      "overhang": 80,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 15,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.04,
+    "dry": {
+      "temp": 80,
+      "hours": 4
+    },
+    "enclosure": "required",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic ABS\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "ASA": {
+    "orcaType": "ASA",
+    "slicerPreset": "Generic ASA @U1 0.4 nozzle",
+    "nozzle": {
+      "min": 240,
+      "max": 280,
+      "print": 260,
+      "firstLayer": 260
+    },
+    "bed": {
+      "print": 90,
+      "firstLayer": 90
+    },
+    "fan": {
+      "min": 10,
+      "max": 80,
+      "overhang": 80,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 12,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.04,
+    "dry": {
+      "temp": 80,
+      "hours": 4
+    },
+    "enclosure": "required",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic ASA @U1 0.4 nozzle\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "TPU": {
+    "orcaType": "TPU",
+    "slicerPreset": "Generic TPU",
+    "nozzle": {
+      "min": 200,
+      "max": 250,
+      "print": 240,
+      "firstLayer": 240
+    },
+    "bed": {
+      "print": 35,
+      "firstLayer": 35
+    },
+    "fan": {
+      "min": 100,
+      "max": 100,
+      "overhang": 100,
+      "offFirstLayers": 1
+    },
+    "maxVolumetricSpeed": 3.2,
+    "flowRatio": 1,
+    "pressureAdvance": 0.4,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 20
+    },
+    "density": 1.24,
+    "dry": {
+      "temp": 55,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic TPU\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "TPU-HF": {
+    "orcaType": "TPU",
+    "slicerPreset": "Generic TPU 95A HF",
+    "nozzle": {
+      "min": 200,
+      "max": 250,
+      "print": 235,
+      "firstLayer": 235
+    },
+    "bed": {
+      "print": 35,
+      "firstLayer": 35
+    },
+    "fan": {
+      "min": 10,
+      "max": 50,
+      "overhang": 100,
+      "offFirstLayers": 1
+    },
+    "maxVolumetricSpeed": 10.5,
+    "flowRatio": 1,
+    "pressureAdvance": 0.15,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.22,
+    "dry": {
+      "temp": 55,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic TPU 95A HF\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PA": {
+    "orcaType": "PA",
+    "slicerPreset": "Generic PA",
+    "nozzle": {
+      "min": 240,
+      "max": 280,
+      "print": 260,
+      "firstLayer": 260
+    },
+    "bed": {
+      "print": 100,
+      "firstLayer": 100
+    },
+    "fan": {
+      "min": 40,
+      "max": 85,
+      "overhang": 95,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 12,
+    "flowRatio": 1,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.04,
+    "dry": {
+      "temp": 80,
+      "hours": 12
+    },
+    "enclosure": "required",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic PA\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PA-CF": {
+    "orcaType": "PA-CF",
+    "slicerPreset": "Generic PA-CF",
+    "nozzle": {
+      "min": 260,
+      "max": 300,
+      "print": 290,
+      "firstLayer": 290
+    },
+    "bed": {
+      "print": 100,
+      "firstLayer": 100
+    },
+    "fan": {
+      "min": 10,
+      "max": 30,
+      "overhang": 40,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 8,
+    "flowRatio": 1,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.04,
+    "dry": {
+      "temp": 80,
+      "hours": 12
+    },
+    "enclosure": "required",
+    "hardenedNozzle": true,
+    "source": "Snapmaker Orca official preset \"Generic PA-CF\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PC": {
+    "orcaType": "PC",
+    "slicerPreset": "Generic PC",
+    "nozzle": {
+      "min": 260,
+      "max": 290,
+      "print": 280,
+      "firstLayer": 280
+    },
+    "bed": {
+      "print": 100,
+      "firstLayer": 100
+    },
+    "fan": {
+      "min": 10,
+      "max": 60,
+      "overhang": 60,
+      "offFirstLayers": 3
+    },
+    "maxVolumetricSpeed": 16,
+    "flowRatio": 0.94,
+    "pressureAdvance": 0.02,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.04,
+    "dry": {
+      "temp": 80,
+      "hours": 8
+    },
+    "enclosure": "required",
+    "hardenedNozzle": false,
+    "source": "Snapmaker Orca official preset \"Generic PC\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "PVA": {
+    "orcaType": "PVA",
+    "slicerPreset": "Generic PVA",
+    "nozzle": {
+      "min": 190,
+      "max": 240,
+      "print": 240,
+      "firstLayer": 240
+    },
+    "bed": {
+      "print": 65,
+      "firstLayer": 65
+    },
+    "fan": {
+      "min": 100,
+      "max": 100,
+      "overhang": 100,
+      "offFirstLayers": 1
+    },
+    "maxVolumetricSpeed": 6,
+    "flowRatio": 0.95,
+    "pressureAdvance": 0.028,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.24,
+    "dry": {
+      "temp": 50,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "soluble": true,
+    "support": true,
+    "source": "Snapmaker Orca official preset \"Generic PVA\" for Snapmaker U1 (0.4 nozzle)"
+  },
+  "BVOH": {
+    "orcaType": "BVOH",
+    "slicerPreset": "Generic BVOH",
+    "nozzle": {
+      "min": 200,
+      "max": 250,
+      "print": 240,
+      "firstLayer": 240
+    },
+    "bed": {
+      "print": 65,
+      "firstLayer": 65
+    },
+    "fan": {
+      "min": 100,
+      "max": 100,
+      "overhang": 100,
+      "offFirstLayers": 1
+    },
+    "maxVolumetricSpeed": 6,
+    "flowRatio": 1,
+    "pressureAdvance": 0.025,
+    "pressureAdvanceEnabled": false,
+    "retraction": {
+      "length": 1.5,
+      "speed": 30
+    },
+    "density": 1.13,
+    "dry": {
+      "temp": 50,
+      "hours": 8
+    },
+    "enclosure": "none",
+    "hardenedNozzle": false,
+    "soluble": true,
+    "support": true,
+    "source": "Snapmaker Orca official preset \"Generic BVOH\" for Snapmaker U1 (0.4 nozzle)"
+  }
+}

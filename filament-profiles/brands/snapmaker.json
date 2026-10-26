@@ -1,0 +1,654 @@
+{
+  "brand": "Snapmaker",
+  "website": "https://www.snapmaker.com",
+  "source": "Official Snapmaker Orca presets for Snapmaker U1 (0.4 nozzle). Regenerate when Snapmaker updates them.",
+  "filaments": [
+    {
+      "name": "PLA Basic",
+      "material": "PLA",
+      "slicerPreset": "Snapmaker PLA Basic @U1",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 15,
+      "flowRatio": 0.98,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 1.5,
+        "speed": 30
+      },
+      "density": 1.32,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA%20Basic%20%40U1.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PLA Matte",
+      "material": "PLA",
+      "slicerPreset": "Snapmaker PLA Matte @U1",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 215,
+        "firstLayer": 215
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 22,
+      "flowRatio": 1,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 1.5,
+        "speed": 30
+      },
+      "density": 1.32,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA%20Matte%20%40U1.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PLA Silk",
+      "material": "PLA-Silk",
+      "slicerPreset": "Snapmaker PLA Silk @U1",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 230,
+        "firstLayer": 230
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 10,
+      "flowRatio": 0.98,
+      "pressureAdvance": 0.015,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 0.2,
+        "speed": 30
+      },
+      "density": 1.32,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA%20Silk%20%40U1.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PLA SnapSpeed",
+      "material": "PLA-HS",
+      "slicerPreset": "Snapmaker PLA SnapSpeed @U1",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 20,
+      "flowRatio": 0.966,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 1.2,
+        "speed": 30
+      },
+      "density": 1.24,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA%20SnapSpeed%20%40U1.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PLA Full Spectrum",
+      "material": "PLA",
+      "slicerPreset": "Snapmaker PLA Full Spectrum @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 15,
+      "flowRatio": 0.98,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 1.5,
+        "speed": 30
+      },
+      "density": 1.32,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA%20Full%20Spectrum%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PLA Glow",
+      "material": "PLA",
+      "slicerPreset": "Snapmaker PLA Glow @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 16,
+      "flowRatio": 0.97,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 0.4,
+        "speed": 30
+      },
+      "density": 1.24,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA%20Glow%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PLA Translucent",
+      "material": "PLA",
+      "slicerPreset": "Snapmaker PLA Translucent @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 3
+      },
+      "maxVolumetricSpeed": 12,
+      "flowRatio": 0.97,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 0.2,
+        "speed": 30
+      },
+      "density": 1.32,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA%20Translucent%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PLA Wood",
+      "material": "PLA",
+      "slicerPreset": "Snapmaker PLA Wood @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 18,
+      "flowRatio": 0.97,
+      "pressureAdvance": 0.025,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 0.6,
+        "speed": 30
+      },
+      "density": 1.24,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA%20Wood%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PLA-CF",
+      "material": "PLA-CF",
+      "slicerPreset": "Snapmaker PLA-CF @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 200,
+        "max": 250,
+        "print": 240,
+        "firstLayer": 240
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 15,
+      "flowRatio": 0.98,
+      "pressureAdvance": 0.01,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 1,
+        "speed": 30
+      },
+      "density": 1.24,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PLA-CF%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "Support For PLA",
+      "material": "PLA",
+      "slicerPreset": "Snapmaker Support For PLA @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 210,
+        "firstLayer": 210
+      },
+      "bed": {
+        "print": 65,
+        "firstLayer": 65
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 12,
+      "flowRatio": 1,
+      "pressureAdvance": 0.03,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 1,
+        "speed": 30
+      },
+      "density": 1.32,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20Support%20For%20PLA%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true,
+      "support": true
+    },
+    {
+      "name": "PETG HF",
+      "material": "PETG-HF",
+      "slicerPreset": "Snapmaker PETG HF",
+      "nozzle": {
+        "min": 230,
+        "max": 270,
+        "print": 245,
+        "firstLayer": 245
+      },
+      "bed": {
+        "print": 70,
+        "firstLayer": 70
+      },
+      "fan": {
+        "min": 20,
+        "max": 40,
+        "overhang": 100,
+        "offFirstLayers": 3
+      },
+      "maxVolumetricSpeed": 20,
+      "flowRatio": 0.95,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 1.5,
+        "speed": 30
+      },
+      "density": 1.28,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PETG%20HF.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PETG Translucent",
+      "material": "PETG",
+      "slicerPreset": "Snapmaker PETG Translucent @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 230,
+        "max": 270,
+        "print": 250,
+        "firstLayer": 250
+      },
+      "bed": {
+        "print": 80,
+        "firstLayer": 80
+      },
+      "fan": {
+        "min": 10,
+        "max": 30,
+        "overhang": 90,
+        "offFirstLayers": 3
+      },
+      "maxVolumetricSpeed": 10,
+      "flowRatio": 0.97,
+      "pressureAdvance": 0.04,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 1,
+        "speed": 30
+      },
+      "density": 1.25,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PETG%20Translucent%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PETG-CF",
+      "material": "PETG-CF",
+      "slicerPreset": "Snapmaker PETG-CF @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 240,
+        "max": 270,
+        "print": 255,
+        "firstLayer": 255
+      },
+      "bed": {
+        "print": 80,
+        "firstLayer": 80
+      },
+      "fan": {
+        "min": 5,
+        "max": 40,
+        "overhang": 100,
+        "offFirstLayers": 3
+      },
+      "maxVolumetricSpeed": 12,
+      "flowRatio": 0.95,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 1.5,
+        "speed": 30
+      },
+      "density": 1.25,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PETG-CF%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "ABS",
+      "material": "ABS",
+      "slicerPreset": "Snapmaker ABS @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 240,
+        "max": 280,
+        "print": 265,
+        "firstLayer": 280
+      },
+      "bed": {
+        "print": 100,
+        "firstLayer": 100
+      },
+      "fan": {
+        "min": 10,
+        "max": 50,
+        "overhang": 80,
+        "offFirstLayers": 3
+      },
+      "maxVolumetricSpeed": 15,
+      "flowRatio": 0.95,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 0.4,
+        "speed": 30
+      },
+      "density": 1.04,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20ABS%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "ASA",
+      "material": "ASA",
+      "slicerPreset": "Snapmaker ASA @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 240,
+        "max": 280,
+        "print": 270,
+        "firstLayer": 270
+      },
+      "bed": {
+        "print": 100,
+        "firstLayer": 100
+      },
+      "fan": {
+        "min": 10,
+        "max": 30,
+        "overhang": 80,
+        "offFirstLayers": 3
+      },
+      "maxVolumetricSpeed": 15,
+      "flowRatio": 0.95,
+      "pressureAdvance": 0.02,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 0.2,
+        "speed": 30
+      },
+      "density": 1.04,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20ASA%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "TPU",
+      "material": "TPU",
+      "slicerPreset": "Snapmaker TPU @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 200,
+        "max": 250,
+        "print": 235,
+        "firstLayer": 235
+      },
+      "bed": {
+        "print": 35,
+        "firstLayer": 35
+      },
+      "fan": {
+        "min": 10,
+        "max": 50,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 10.5,
+      "flowRatio": 1,
+      "pressureAdvance": 0.15,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 1.5,
+        "speed": 30
+      },
+      "density": 1.22,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20TPU%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "TPU 90A",
+      "material": "TPU",
+      "slicerPreset": "Snapmaker TPU 90A @U1",
+      "nozzle": {
+        "min": 200,
+        "max": 250,
+        "print": 230,
+        "firstLayer": 230
+      },
+      "bed": {
+        "print": 35,
+        "firstLayer": 35
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 3.2,
+      "flowRatio": 1.045,
+      "pressureAdvance": 0.4,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 1.2,
+        "speed": 15
+      },
+      "density": 1.24,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20TPU%2090A%20%40U1.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "TPU 95A HF",
+      "material": "TPU-HF",
+      "slicerPreset": "Snapmaker TPU 95A HF @U1 0.4 nozzle",
+      "nozzle": {
+        "min": 200,
+        "max": 250,
+        "print": 230,
+        "firstLayer": 230
+      },
+      "bed": {
+        "print": 35,
+        "firstLayer": 35
+      },
+      "fan": {
+        "min": 10,
+        "max": 50,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 9,
+      "flowRatio": 1.067,
+      "pressureAdvance": 0.23,
+      "pressureAdvanceEnabled": false,
+      "retraction": {
+        "length": 1.5,
+        "speed": 40
+      },
+      "density": 1.24,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20TPU%2095A%20HF%20%40U1%200.4%20nozzle.json"
+      ],
+      "verified": true
+    },
+    {
+      "name": "PVA",
+      "material": "PVA",
+      "slicerPreset": "Snapmaker PVA @U1",
+      "nozzle": {
+        "min": 190,
+        "max": 240,
+        "print": 240,
+        "firstLayer": 240
+      },
+      "bed": {
+        "print": 70,
+        "firstLayer": 70
+      },
+      "fan": {
+        "min": 100,
+        "max": 100,
+        "overhang": 100,
+        "offFirstLayers": 1
+      },
+      "maxVolumetricSpeed": 5,
+      "flowRatio": 1,
+      "pressureAdvance": 0.03,
+      "pressureAdvanceEnabled": true,
+      "retraction": {
+        "length": 0.4,
+        "speed": 30
+      },
+      "density": 1.27,
+      "sources": [
+        "https://github.com/Snapmaker/OrcaSlicer/blob/main/resources/profiles/Snapmaker/filament/Snapmaker%20PVA%20%40U1.json"
+      ],
+      "verified": true
+    }
+  ]
+}
