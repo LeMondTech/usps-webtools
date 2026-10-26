@@ -47,11 +47,18 @@ function buildSite(db) {
   :root:not([data-theme="light"]) {
     --bg: #161615; --panel: #1f1f1d; --text: #ecece8; --muted: #a3a39c; --line: #33332f;
     --accent: #4d9bf0; --accent-ink: #0b0b0a; --ok: #4ac26b; --warn: #d4a72c; --chip: #2a2a27;
+    color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #161615; --panel: #1f1f1d; --text: #ecece8; --muted: #a3a39c; --line: #33332f;
+  --accent: #4d9bf0; --accent-ink: #0b0b0a; --ok: #4ac26b; --warn: #d4a72c; --chip: #2a2a27;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, -apple-system, Segoe UI, sans-serif; }
-header, main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+header, main { max-width: 1100px; margin: 0 auto; padding-block: 16px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.layout > * { min-width: 0; }
 h1 { font-size: 22px; margin: 8px 0 2px; }
 .sub { color: var(--muted); margin: 0; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
@@ -72,6 +79,10 @@ h1 { font-size: 22px; margin: 8px 0 2px; }
 dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 14px 0; }
 dt { color: var(--muted); } dd { margin: 0; font-variant-numeric: tabular-nums; }
 button { padding: 8px 14px; border-radius: 8px; border: 0; background: var(--accent); color: var(--accent-ink); font: inherit; font-weight: 600; cursor: pointer; }
+button.secondary { background: var(--chip); color: var(--text); }
+button:focus-visible, .row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.actions span { color: var(--muted); font-size: 13px; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
 th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--line); }
 .empty { color: var(--muted); padding: 16px; }
@@ -101,6 +112,7 @@ const GENERATED = ${JSON.stringify(generated)};
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 let selected = null;
+const EMBEDDED = window.self !== window.top;
 
 function fill(select, values) {
   [...new Set(values)].sort().forEach(v => select.add(new Option(v, v)));
@@ -122,7 +134,7 @@ function filtered() {
 function renderList() {
   const rows = filtered();
   $('list').innerHTML = rows.length ? rows.map(d =>
-    '<div class="row' + (d.id === selected ? ' sel' : '') + '" data-id="' + esc(d.id) + '">' +
+    '<div class="row' + (d.id === selected ? ' sel' : '') + '" tabindex="0" data-id="' + esc(d.id) + '">' +
       '<span class="t">' + esc(d.brand) + ' ' + esc(d.name) + '</span>' +
       '<span>' + (d.tuning.length ? '<span class="chip ok">tuned</span>' : '<span class="chip">untuned</span>') + '</span>' +
       '<span class="m">' + esc(d.material) + ' · ' + d.nozzle.print + '°C / bed ' + Math.min(d.bed.print, d.bedMax) + '°C · ' + d.maxVolumetricSpeed + ' mm³/s</span>' +
@@ -156,7 +168,15 @@ function renderDetail(d) {
       (d.dry ? '<dt>Drying</dt><dd>' + d.dry.temp + '°C for ' + d.dry.hours + ' h</dd>' : '') +
     '</dl>' +
     (d.notes ? '<p class="note">' + esc(d.notes) + '</p>' : '') +
-    '<button id="dl">Download Snapmaker Orca preset</button>' + tuning;
+    '<div class="actions"><button id="dl"' + (EMBEDDED ? ' hidden' : '') + '>Download Snapmaker Orca preset</button>' +
+    '<button id="copy" class="' + (EMBEDDED ? '' : 'secondary') + '">Copy preset JSON</button><span id="copied" role="status"></span></div>' + tuning;
+  const presetText = JSON.stringify(d.preset, null, 4);
+  $('copy').onclick = () => {
+    const done = msg => { $('copied').textContent = msg; };
+    navigator.clipboard.writeText(presetText)
+      .then(() => done('Copied. Save it as "' + d.file + '" and import it in Snapmaker Orca.'))
+      .catch(() => done('Copy was blocked here. Use "filadb export" to get the file.'));
+  };
   $('dl').onclick = () => {
     const blob = new Blob([JSON.stringify(d.preset, null, 4)], { type: 'application/json' });
     const a = document.createElement('a');
@@ -173,6 +193,9 @@ $('list').addEventListener('click', e => {
   selected = row.dataset.id;
   renderDetail(DATA.find(d => d.id === selected));
   renderList();
+});
+$('list').addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('row')) { e.preventDefault(); e.target.click(); }
 });
 ['q', 'brand', 'material', 'status'].forEach(id => $(id).addEventListener('input', renderList));
 renderList();
