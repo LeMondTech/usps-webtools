@@ -1,17 +1,37 @@
 {
   "id": "snapmaker-u1",
   "name": "Snapmaker U1",
-  "toolheads": ["T0", "T1", "T2", "T3"],
-  "buildVolume": { "x": 270, "y": 270, "z": 270 },
-  "nozzle": { "diameter": 0.4, "maxTemp": 300, "material": "stainless steel" },
-  "bed": { "maxTemp": 100, "surface": "PEI flexible steel sheet" },
+  "toolheads": [
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "buildVolume": {
+    "x": 270,
+    "y": 270,
+    "z": 270
+  },
+  "nozzle": {
+    "diameter": 0.4,
+    "maxTemp": 300,
+    "material": "stainless steel"
+  },
+  "bed": {
+    "maxTemp": 100,
+    "surface": "PEI flexible steel sheet"
+  },
   "filamentDiameter": 1.75,
   "enclosure": false,
   "source": "https://www.snapmaker.com/snapmaker-u1/specs",
   "slicer": {
     "name": "Snapmaker Orca",
+    "printerPreset": "Snapmaker U1 (0.4 nozzle)",
     "presetSuffix": "@U1",
-    "compatiblePrinters": [],
-    "_compatiblePrinters": "Leave empty to show exported presets for every printer, or set to your printer preset name exactly as it appears in Snapmaker Orca, e.g. [\"Snapmaker U1 (0.4 nozzle)\"]."
+    "compatiblePrinters": [
+      "Snapmaker U1 (0.4 nozzle)"
+    ],
+    "inheritOfficialPresets": true,
+    "_notes": "Printer preset name and retraction default (1.5 mm @ 30 mm/s) are from Snapmaker's official U1 machine preset in github.com/Snapmaker/OrcaSlicer. With inheritOfficialPresets, exported presets inherit the matching official Snapmaker filament preset so Snapmaker's other settings carry over; set it to false to export standalone presets."
   }
 }

@@ -74,7 +74,7 @@ function resolveMaterials(raw) {
     resolved[name] = parent ? deepMerge(visit(parent, [...seen, name]), own) : own;
     return resolved[name];
   };
-  Object.keys(raw).forEach(name => visit(name));
+  Object.keys(raw).filter(name => !name.startsWith('_')).forEach(name => visit(name));
   return resolved;
 }
 
@@ -99,6 +99,8 @@ function applyTuning(profile, tuning) {
     for (const [field, target] of Object.entries(TUNING_FIELDS)) {
       if (entry[field] !== undefined && entry[field] !== null) setPath(out, target, entry[field]);
     }
+    // A measured PA value is only useful if the slicer actually sends it.
+    if (typeof entry.pressureAdvance === 'number') out.pressureAdvanceEnabled = true;
   }
   return out;
 }

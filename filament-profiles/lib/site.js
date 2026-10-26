@@ -23,6 +23,8 @@ function buildSite(db) {
     hardenedNozzle: !!p.hardenedNozzle,
     notes: p.notes || '',
     verified: !!p.verified,
+    sources: p.sources || [],
+    slicerPreset: p.slicerPreset || '',
     tuning: p.tuning,
     lastTuned: p.lastTuned,
     bedMax: db.printer.bed.maxTemp,
@@ -86,7 +88,8 @@ button:focus-visible, .row:focus-visible { outline: 2px solid var(--accent); out
 table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
 th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--line); }
 .empty { color: var(--muted); padding: 16px; }
-.note { color: var(--muted); font-size: 13px; white-space: pre-wrap; }
+.note { color: var(--muted); font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.note a { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -168,6 +171,8 @@ function renderDetail(d) {
       (d.dry ? '<dt>Drying</dt><dd>' + d.dry.temp + '°C for ' + d.dry.hours + ' h</dd>' : '') +
     '</dl>' +
     (d.notes ? '<p class="note">' + esc(d.notes) + '</p>' : '') +
+    (d.slicerPreset ? '<p class="note">Builds on the official Snapmaker preset "' + esc(d.slicerPreset) + '".</p>' : '') +
+    (d.sources.length ? '<p class="note">Sources: ' + d.sources.map(u => '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]) + '</a>').join(', ') + '</p>' : '') +
     '<div class="actions"><button id="dl"' + (EMBEDDED ? ' hidden' : '') + '>Download Snapmaker Orca preset</button>' +
     '<button id="copy" class="' + (EMBEDDED ? '' : 'secondary') + '">Copy preset JSON</button><span id="copied" role="status"></span></div>' + tuning;
   const presetText = JSON.stringify(d.preset, null, 4);

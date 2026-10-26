@@ -18,6 +18,7 @@ function fileName(profile, printer) {
 function notes(profile) {
   const lines = [];
   if (profile.notes) lines.push(profile.notes);
+  if (profile.sources && profile.sources.length) lines.push('Sources: ' + profile.sources.join(' '));
   if (profile.dry) lines.push(`Dry: ${profile.dry.temp}°C for ${profile.dry.hours}h`);
   if (profile.hardenedNozzle) lines.push('Requires a hardened nozzle.');
   if (profile.enclosure === 'required') lines.push('Print enclosed (U1 top cover).');
@@ -32,12 +33,14 @@ function toOrcaPreset(profile, printer) {
   const bed = clampBed(profile.bed.print);
   const bed1 = clampBed(profile.bed.firstLayer);
   const pa = profile.pressureAdvance;
+  const paOn = profile.pressureAdvanceEnabled && pa !== null && pa !== undefined;
   const name = presetName(profile, printer);
+  const inherits = printer.slicer && printer.slicer.inheritOfficialPresets && profile.slicerPreset ? profile.slicerPreset : '';
 
   return {
     type: 'filament',
     name,
-    inherits: '',
+    inherits,
     from: 'User',
     instantiation: 'true',
     filament_settings_id: s(name),
@@ -47,7 +50,7 @@ function toOrcaPreset(profile, printer) {
     filament_density: s(profile.density),
     filament_cost: s(profile.costPerKg || 0),
     filament_flow_ratio: s(profile.flowRatio),
-    enable_pressure_advance: s(pa === null || pa === undefined ? 0 : 1),
+    enable_pressure_advance: s(paOn ? 1 : 0),
     pressure_advance: s(pa === null || pa === undefined ? 0 : pa),
     filament_max_volumetric_speed: s(profile.maxVolumetricSpeed),
     nozzle_temperature: s(profile.nozzle.print),

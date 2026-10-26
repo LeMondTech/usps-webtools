@@ -38,12 +38,22 @@ test('the shipped database validates with no errors', () => {
   assert.deepEqual(db.validate(data).errors, []);
 });
 
-test('materials inherit through extends', () => {
-  const { materials } = db.load();
-  assert.equal(materials.ASA.orcaType, 'ASA');
+test('materials support extends and skip _ metadata keys', () => {
+  const materials = db.resolveMaterials({
+    _about: 'ignored',
+    ABS: { nozzle: { min: 240, max: 280, print: 270, firstLayer: 270 }, enclosure: 'required' },
+    ASA: { extends: 'ABS', nozzle: { print: 260 } }
+  });
+  assert.deepEqual(Object.keys(materials), ['ABS', 'ASA']);
   assert.equal(materials.ASA.enclosure, 'required');
-  assert.equal(materials['PA-CF'].hardenedNozzle, true);
-  assert.equal(materials['PA-CF'].nozzle.print, materials.PA.nozzle.print);
+  assert.equal(materials.ASA.nozzle.print, 260);
+  assert.equal(materials.ASA.nozzle.max, 280);
+});
+
+test('every material maps to an official Snapmaker U1 preset', () => {
+  for (const [name, m] of Object.entries(db.load().materials)) {
+    assert.ok(m.slicerPreset, `${name} has no slicerPreset`);
+  }
 });
 
 test('brand values override material defaults and keep the rest', () => {
@@ -89,10 +99,24 @@ test('Orca export clamps bed temperature and uses string arrays', () => {
   assert.equal(fileName(p, data.printer), 'Prusament ASA @U1.json');
 });
 
-test('pressure advance null disables it in the preset', () => {
+test('pressure advance follows the enabled flag, and a tuned PA value turns it on', () => {
   const data = db.load();
-  const preset = toOrcaPreset(db.findProfile(data, 'esun-etpu-95a'), data.printer);
-  assert.deepEqual(preset.enable_pressure_advance, ['0']);
+  const { materials, printer } = data;
+  const off = db.resolveProfile({ brand: 'Test' }, { name: 'PLA', material: 'PLA', pressureAdvanceEnabled: false }, materials);
+  assert.deepEqual(toOrcaPreset(off, printer).enable_pressure_advance, ['0']);
+  const tuned = db.resolveProfile({ brand: 'Test' }, { name: 'PLA', material: 'PLA', pressureAdvanceEnabled: false, tuning: [{ date: '2026-10-01', pressureAdvance: 0.03 }] }, materials);
+  const preset = toOrcaPreset(tuned, printer);
+  assert.deepEqual(preset.enable_pressure_advance, ['1']);
+  assert.deepEqual(preset.pressure_advance, ['0.03']);
+});
+
+test('exported presets inherit the official preset and target the U1', () => {
+  const data = db.load();
+  const preset = toOrcaPreset(db.findProfile(data, 'snapmaker-pla-basic'), data.printer);
+  assert.equal(preset.inherits, 'Snapmaker PLA Basic @U1');
+  assert.deepEqual(preset.compatible_printers, ['Snapmaker U1 (0.4 nozzle)']);
+  const generic = toOrcaPreset(db.findProfile(data, 'hatchbox-pla'), data.printer);
+  assert.equal(generic.inherits, 'Generic PLA');
 });
 
 test('add then tune round-trips through the brand files', () => {

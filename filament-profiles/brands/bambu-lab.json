@@ -5,39 +5,79 @@
     {
       "name": "PLA Basic",
       "material": "PLA",
-      "nozzle": { "min": 190, "max": 230, "print": 220, "firstLayer": 220 },
-      "bed": { "print": 60, "firstLayer": 60 },
+      "nozzle": {
+        "min": 190,
+        "max": 230,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 60,
+        "firstLayer": 60
+      },
       "maxVolumetricSpeed": 21,
       "verified": false
     },
     {
       "name": "PLA Matte",
       "material": "PLA",
-      "nozzle": { "min": 190, "max": 230, "print": 220, "firstLayer": 220 },
-      "bed": { "print": 60, "firstLayer": 60 },
+      "nozzle": {
+        "min": 190,
+        "max": 230,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "bed": {
+        "print": 60,
+        "firstLayer": 60
+      },
       "density": 1.32,
       "verified": false
     },
     {
       "name": "PETG HF",
-      "material": "PETG",
-      "nozzle": { "min": 230, "max": 260, "print": 250, "firstLayer": 250 },
-      "bed": { "print": 70, "firstLayer": 70 },
+      "material": "PETG-HF",
+      "nozzle": {
+        "min": 230,
+        "max": 260,
+        "print": 250,
+        "firstLayer": 250
+      },
+      "bed": {
+        "print": 70,
+        "firstLayer": 70
+      },
       "maxVolumetricSpeed": 18,
       "verified": false
     },
     {
       "name": "ABS",
       "material": "ABS",
-      "nozzle": { "min": 240, "max": 270, "print": 260, "firstLayer": 260 },
-      "bed": { "print": 95, "firstLayer": 100 },
+      "nozzle": {
+        "min": 240,
+        "max": 270,
+        "print": 260,
+        "firstLayer": 260
+      },
+      "bed": {
+        "print": 95,
+        "firstLayer": 100
+      },
       "verified": false
     },
     {
       "name": "TPU 95A HF",
-      "material": "TPU",
-      "nozzle": { "min": 220, "max": 240, "print": 230, "firstLayer": 230 },
-      "bed": { "print": 35, "firstLayer": 35 },
+      "material": "TPU-HF",
+      "nozzle": {
+        "min": 220,
+        "max": 240,
+        "print": 230,
+        "firstLayer": 230
+      },
+      "bed": {
+        "print": 35,
+        "firstLayer": 35
+      },
       "maxVolumetricSpeed": 8,
       "verified": false
     }
