@@ -5,30 +5,101 @@
     {
       "name": "PLA+",
       "material": "PLA",
-      "nozzle": { "min": 205, "max": 225, "print": 215, "firstLayer": 220 },
-      "bed": { "print": 60, "firstLayer": 60 },
+      "nozzle": {
+        "min": 210,
+        "max": 230,
+        "print": 215,
+        "firstLayer": 215
+      },
+      "bed": {
+        "print": 60,
+        "firstLayer": 60
+      },
       "density": 1.23,
+      "dry": {
+        "temp": 50,
+        "hours": 8
+      },
+      "notes": "TDS lists <350 mm/s max speed. eSUN reformulated PLA+; older TDS versions differ.",
+      "sources": [
+        "https://www.esun3d.com/pla-pro-product",
+        "https://www.esun3d.com/uploads/eSUN_PLA+-Filament_TDS_V4.0.pdf"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     },
     {
       "name": "PETG",
       "material": "PETG",
-      "nozzle": { "min": 230, "max": 250, "print": 240, "firstLayer": 240 },
-      "bed": { "print": 75, "firstLayer": 75 },
+      "nozzle": {
+        "min": 230,
+        "max": 260,
+        "print": 255,
+        "firstLayer": 255
+      },
+      "bed": {
+        "print": 80,
+        "firstLayer": 80
+      },
+      "density": 1.27,
+      "dry": {
+        "temp": 60,
+        "hours": 8
+      },
+      "notes": "TDS (Jul 2025) lists <150 mm/s max speed, PEI plate. Product page lists 240-260 \u00b0C.",
+      "sources": [
+        "https://www.esun3d.com/petg-product",
+        "https://www.esun3d.com/media/esun/catalog/certification/product/PETG/eSUN_PETG_Filament_TDS_1.pdf"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     },
     {
       "name": "ABS+",
       "material": "ABS",
-      "nozzle": { "min": 230, "max": 270, "print": 250, "firstLayer": 255 },
-      "bed": { "print": 95, "firstLayer": 100 },
+      "nozzle": {
+        "min": 230,
+        "max": 270,
+        "print": 270,
+        "firstLayer": 270
+      },
+      "bed": {
+        "print": 95,
+        "firstLayer": 95
+      },
+      "density": 1.06,
+      "notes": "eSUN recommends an enclosed chamber and little or no part cooling. Reformulated product; older listings differ.",
+      "sources": [
+        "https://www.esun3d.com/abs-pro-product",
+        "https://www.esun3d.com/wiki/abs-material"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     },
     {
       "name": "eTPU-95A",
       "material": "TPU",
-      "nozzle": { "min": 200, "max": 220, "print": 215, "firstLayer": 215 },
-      "bed": { "print": 45, "firstLayer": 45 },
+      "nozzle": {
+        "min": 210,
+        "max": 250,
+        "print": 240,
+        "firstLayer": 240
+      },
+      "bed": {
+        "print": 45,
+        "firstLayer": 45
+      },
+      "density": 1.21,
+      "dry": {
+        "temp": 55,
+        "hours": 4
+      },
+      "notes": "TDS recommends 20-50 mm/s. Reduce or disable retraction.",
+      "sources": [
+        "https://www.esun3d.com/etpu-95a-product",
+        "https://www.esun3d.com/uploads/eSUN_eTPU-95A-Filament_TDS_V4.0.pdf"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     }
   ]

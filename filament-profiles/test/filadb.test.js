@@ -57,10 +57,12 @@ test('every material maps to an official Snapmaker U1 preset', () => {
 });
 
 test('brand values override material defaults and keep the rest', () => {
-  const p = db.findProfile(db.load(), 'polymaker-polyterra-pla');
+  const { materials } = db.load();
+  const p = db.resolveProfile({ brand: 'Test' }, { name: 'PLA', material: 'PLA', nozzle: { print: 210 }, density: 1.31 }, materials);
   assert.equal(p.nozzle.print, 210);
+  assert.equal(p.nozzle.max, materials.PLA.nozzle.max);
   assert.equal(p.density, 1.31);
-  assert.equal(p.flowRatio, 0.98);
+  assert.equal(p.flowRatio, materials.PLA.flowRatio);
   assert.equal(p.tuned, false);
 });
 

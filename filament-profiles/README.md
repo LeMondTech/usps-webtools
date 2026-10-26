@@ -18,7 +18,7 @@ npm test
 | File | What it holds |
 | --- | --- |
 | `printers/snapmaker-u1.json` | Printer limits used for validation and export (nozzle/bed max temps, toolheads, slicer settings). |
-| `materials.json` | Defaults per material type (PLA, PLA-HS, PLA-CF, PETG, PETG-CF, ABS, ASA, TPU, PA, PA-CF, PC, PVA). A material can `extends` another. |
+| `materials.json` | Defaults per material type (PLA, PLA-HS, PLA-Silk, PLA-CF, PETG, PETG-HF, PETG-CF, PETG-GF, PCTG, ABS, ASA, TPU, TPU-HF, PA, PA-CF, PC, PVA, BVOH), taken from Snapmaker's official U1 presets. A material can `extends` another. |
 | `brands/<brand>.json` | One file per brand. Each filament only lists what differs from its material defaults. |
 
 A profile's effective settings are built in three layers, each overriding the last:
@@ -88,9 +88,7 @@ In Snapmaker Orca choose **File > Import > Import Configs** and pick the
 files in `dist/orca/`. Presets are named `<Brand> <Name> @U1`. Re-export and
 re-import after you tune: importing a preset with the same name replaces it.
 
-By default the presets don't set `compatible_printers`, so they show up for
-every printer. To limit them to the U1, set `slicer.compatiblePrinters` in
-`printers/snapmaker-u1.json` to your printer preset's exact name in Snapmaker Orca.
+Presets are set to `Snapmaker U1 (0.4 nozzle)`, Snapmaker Orca's U1 printer preset. If you use a different nozzle size, change `slicer.compatiblePrinters` in `printers/snapmaker-u1.json`.
 
 **Browse.** Run `node bin/filadb.js site` and open `dist/index.html`. You can
 filter by brand, material or tuned status, and each filament has a button to
@@ -107,13 +105,28 @@ download its preset.
   print temperature outside the filament's rated range, abrasive filaments
   that need a hardened nozzle, and materials that need the top cover.
 
-## About the seed data
+## Where the data comes from
 
-The brand files start you off with common filaments from Snapmaker, Polymaker,
-Bambu Lab, eSUN, Elegoo, SUNLU, Overture, Prusament and HATCHBOX. Temperatures
-follow typical manufacturer recommendations. Flow, pressure advance and max
-volumetric speed are conservative generic starting points, not measured on a
-U1. Every entry is marked `"verified": false`. Before you rely on one, check it
-against the spool label or TDS, then calibrate it and log the result with `tune`.
+| Data | Source | Status |
+| --- | --- | --- |
+| Material defaults (`materials.json`) | Snapmaker's official U1 Generic presets (0.4 nozzle) in [Snapmaker/OrcaSlicer](https://github.com/Snapmaker/OrcaSlicer/tree/main/resources/profiles/Snapmaker/filament): temperatures, fan, flow ratio, pressure advance, max volumetric speed, retraction, density. | Read from the preset files. Drying, enclosure and hardened-nozzle flags are general guidance. |
+| Snapmaker filaments (`brands/snapmaker.json`) | Snapmaker's official U1 presets for its own filaments; each entry links its preset file. | `verified: true` |
+| Other brands | Manufacturer product pages and TDS PDFs, linked in each entry's `sources`. | `verified: false`. These sites were unreachable from the environment that built this, so values came from search-engine excerpts of those official pages. Check them against the spool label or TDS. |
+| U1 limits (`printers/snapmaker-u1.json`) | Snapmaker's [spec page](https://www.snapmaker.com/snapmaker-u1/specs) and the official U1 machine preset (printer preset name, 1.5 mm @ 30 mm/s retraction). | |
 
-U1 limits come from Snapmaker's [spec page](https://www.snapmaker.com/snapmaker-u1/specs).
+How brand entries are filled in:
+
+- The nozzle range comes from the manufacturer.
+- The print temperature is the manufacturer's recommendation if they give one. Otherwise it's Snapmaker's U1 default for that material, kept inside the manufacturer's range.
+- Bed temperature works the same way. Where a brand gives plate-specific ranges, the textured PEI range is used, since that's the U1's plate.
+- Flow, pressure advance and max volumetric speed use Snapmaker's U1 defaults unless the manufacturer states a value. Calibrate them on your printer and log the results with `tune`.
+
+Exported presets inherit the matching official Snapmaker preset (`slicerPreset`), so Snapmaker's other settings carry over. To export standalone presets instead, set `slicer.inheritOfficialPresets` to `false` in `printers/snapmaker-u1.json`.
+
+To refresh the Snapmaker data when Snapmaker updates its presets, re-read the preset files under `resources/profiles/Snapmaker/filament/` (names containing `@U1`, or compatible with `Snapmaker U1 (0.4 nozzle)`). Follow each file's `inherits` chain to get its full values.
+
+Product changes found during research:
+
+- **Polymaker:** PolyTerra PLA is now sold as Panchroma Matte PLA. PolyLite PETG is being replaced by the new Polymaker PETG, which has its own entry. PolyLite ASA is now Polymaker ASA.
+- **Bambu Lab:** PETG HF is discontinued.
+- **Overture:** the main PETG product is now High Speed PETG.

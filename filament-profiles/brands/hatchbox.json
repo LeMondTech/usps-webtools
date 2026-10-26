@@ -5,8 +5,17 @@
     {
       "name": "PLA",
       "material": "PLA",
-      "nozzle": { "min": 180, "max": 210, "print": 205, "firstLayer": 210 },
-      "bed": { "print": 55, "firstLayer": 55 },
+      "nozzle": {
+        "min": 180,
+        "max": 220,
+        "print": 220,
+        "firstLayer": 220
+      },
+      "notes": "HATCHBOX publishes only the nozzle range; bed temperature uses the U1 PLA default.",
+      "sources": [
+        "https://www.hatchbox3d.com/products/3d-pla-1kg1-75-blk"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     }
   ]

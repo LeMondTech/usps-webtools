@@ -12,10 +12,20 @@
         "firstLayer": 220
       },
       "bed": {
-        "print": 60,
-        "firstLayer": 60
+        "print": 65,
+        "firstLayer": 65
       },
-      "maxVolumetricSpeed": 21,
+      "density": 1.24,
+      "dry": {
+        "temp": 50,
+        "hours": 8
+      },
+      "notes": "Bed range is Bambu's Textured PEI guidance (the U1 plate). The TDS also lists 35-45 \u00b0C with glue.",
+      "sources": [
+        "https://wiki.bambulab.com/filament-acc/abs-asa-pc/bambu_pla_basic_technical_data_sheet.pdf",
+        "https://bambulab.com/en-us/filament/pla"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     },
     {
@@ -28,10 +38,20 @@
         "firstLayer": 220
       },
       "bed": {
-        "print": 60,
-        "firstLayer": 60
+        "print": 65,
+        "firstLayer": 65
       },
-      "density": 1.32,
+      "density": 1.31,
+      "dry": {
+        "temp": 50,
+        "hours": 8
+      },
+      "notes": "Bed range is Bambu's Textured PEI guidance (the U1 plate).",
+      "sources": [
+        "https://us.store.bambulab.com/products/pla-matte",
+        "https://bambulab.com/en-us/filament/pla"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     },
     {
@@ -40,14 +60,24 @@
       "nozzle": {
         "min": 230,
         "max": 260,
-        "print": 250,
-        "firstLayer": 250
+        "print": 230,
+        "firstLayer": 230
       },
       "bed": {
-        "print": 70,
-        "firstLayer": 70
+        "print": 80,
+        "firstLayer": 80
       },
-      "maxVolumetricSpeed": 18,
+      "density": 1.28,
+      "dry": {
+        "temp": 65,
+        "hours": 8
+      },
+      "notes": "Bambu says PETG HF is discontinued and being replaced by an improved PETG. Bed range is Bambu's PEI guidance.",
+      "sources": [
+        "https://us.store.bambulab.com/products/petg-hf",
+        "https://bambulab.com/en-us/filament/guide"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     },
     {
@@ -56,13 +86,28 @@
       "nozzle": {
         "min": 240,
         "max": 270,
-        "print": 260,
-        "firstLayer": 260
+        "print": 270,
+        "firstLayer": 270
       },
       "bed": {
-        "print": 95,
-        "firstLayer": 100
+        "print": 90,
+        "firstLayer": 90
       },
+      "fan": {
+        "min": 0,
+        "max": 80
+      },
+      "density": 1.05,
+      "dry": {
+        "temp": 80,
+        "hours": 8
+      },
+      "notes": "Use glue on the plate and the U1 top cover. Bambu's ABS guide lists up to 280 \u00b0C nozzle.",
+      "sources": [
+        "https://us.store.bambulab.com/products/abs-filament",
+        "https://bambulab.com/en-us/filament/abs"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     },
     {
@@ -78,7 +123,18 @@
         "print": 35,
         "firstLayer": 35
       },
-      "maxVolumetricSpeed": 8,
+      "maxVolumetricSpeed": 12,
+      "density": 1.22,
+      "dry": {
+        "temp": 70,
+        "hours": 8
+      },
+      "notes": "Very sensitive to humidity; dry before use.",
+      "sources": [
+        "https://us.store.bambulab.com/products/tpu-95a-hf",
+        "https://bambulab.com/en-eu/filament/tpu-95a-hf"
+      ],
+      "sourceConfidence": "partial: taken from search-engine excerpts of the official pages listed in sources, not read on the page directly. Check against the spool label or TDS.",
       "verified": false
     }
   ]
